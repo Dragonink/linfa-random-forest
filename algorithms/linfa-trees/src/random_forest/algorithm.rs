@@ -15,6 +15,8 @@ use ndarray::{Array, Array1, Array2, ArrayBase, Axis, Data, Ix1, Ix2};
 use ndarray_rand::rand::thread_rng;
 use ndarray_rand::rand::Rng;
 use rayon::scope;
+#[cfg(feature = "serde")]
+use serde_crate::{Deserialize, Serialize};
 use std::sync::{Arc, Mutex};
 
 /// A random forest model for classification
